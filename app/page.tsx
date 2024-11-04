@@ -5,7 +5,6 @@ import GradualSpacing from "@/components/ui/gradual-spacing";
 import Image from "next/image";
 
 import BlurIn from "@/components/ui/blur-in";
-import { Mail } from "lucide-react";
 
 export default function Home() {
   return (
