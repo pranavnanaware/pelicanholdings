@@ -8,6 +8,16 @@ const bricolage = Bricolage_Grotesque({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Pelican Holdings",
   description: "We are a global entertainment and technology company",
+  openGraph: {
+    images: [
+      {
+        url: "/pellican.png",
+        width: 1200,
+        height: 630,
+        alt: "Pelican Holdings",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
