@@ -1,7 +1,6 @@
 "use client";
 
 import { AnimatePresence, motion, Variants } from "framer-motion";
-
 import { cn } from "@/lib/utils";
 
 interface GradualSpacingProps {
@@ -22,21 +21,49 @@ export default function GradualSpacing({
   },
   className,
 }: GradualSpacingProps) {
+  const words = text.split(" ");
+  let charCounter = 0;
+
   return (
-    <div className="flex justify-center space-x-1">
+    <div className="flex flex-wrap justify-center">
       <AnimatePresence>
-        {text.split("").map((char, i) => (
-          <motion.h1
-            key={i}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={framerProps}
-            transition={{ duration, delay: i * delayMultiple }}
-            className={cn("drop-shadow-sm ", className)}
-          >
-            {char === " " ? <span>&nbsp;</span> : char}
-          </motion.h1>
+        {words.map((word, wordIndex) => (
+          <span key={wordIndex} className="inline-flex whitespace-nowrap">
+            {word.split("").map((char) => {
+              const currentIndex = charCounter++;
+              return (
+                <motion.h1
+                  key={currentIndex}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={framerProps}
+                  transition={{
+                    duration,
+                    delay: currentIndex * delayMultiple,
+                  }}
+                  className={cn("drop-shadow-sm", className)}
+                >
+                  {char}
+                </motion.h1>
+              );
+            })}
+            {/* Add space between words */}
+            <motion.h1
+              key={`space-${wordIndex}`}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={framerProps}
+              transition={{
+                duration,
+                delay: charCounter * delayMultiple,
+              }}
+              className={cn("drop-shadow-sm", className)}
+            >
+              &nbsp;
+            </motion.h1>
+          </span>
         ))}
       </AnimatePresence>
     </div>
