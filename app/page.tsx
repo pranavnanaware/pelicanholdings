@@ -17,11 +17,11 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <Image src={"/pellican.png"} alt={""} height={200} width={200} />
+            <Image src={"/pellican.png"} alt={""} height={150} width={150} />
           </motion.div>
           <div className="w-full md:w-3/4 lg:w-1/2">
             <GradualSpacing
-              className="font-display text-center text-2xl font-bold tracking-tight text-black  dark:text-white sm:text-3xl md:text-6xl lg:text-7xl"
+              className="font-display text-center text-4xl font-bold tracking-tight text-black dark:text-white sm:text-4xl md:text-5xl lg:text-6xl"
               text="A global entertainment and technology company "
             />
           </div>
@@ -33,12 +33,12 @@ export default function Home() {
           transition={{ delay: 0.5 }}
           className="flex flex-col  items-center justify-center"
         >
-          <h1 className="text-xl font-medium text-black">
+          <h1 className=" text-lg md:text-xl font-medium text-black">
             2108 N ST #9219 Sacramento, CA 95816
           </h1>
           <a
             href="mailto:jp@pelicanholdings.com"
-            className="text-xl font-medium text-black"
+            className=" text-lg md:text-xl font-medium text-black"
           >
             <h1>jp@pelicanholdings.com</h1>
           </a>

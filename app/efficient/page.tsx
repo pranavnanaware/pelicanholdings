@@ -19,14 +19,14 @@ export default function Home() {
             <Image
               src={"/efficient.png"}
               alt={""}
-              height={200}
-              width={200}
+              height={150}
+              width={150}
               className="invert"
             />
           </motion.div>
           <div className="w-full md:w-3/4 lg:w-1/2">
             <GradualSpacing
-              className="font-display text-center text-2xl font-bold tracking-tight text-black  dark:text-white sm:text-3xl md:text-5xl lg:text-6xl"
+              className="font-display text-center text-4xl font-bold tracking-tight text-black dark:text-white sm:text-4xl md:text-5xl lg:text-6xl"
               text="A home entertainment technology company building the televisions of tomorrow "
             />
           </div>
@@ -38,10 +38,12 @@ export default function Home() {
           transition={{ delay: 0.5 }}
           className="flex flex-col  items-center justify-center"
         >
-          <h1 className="text-xl font-medium text-black">Los Angeles, CA</h1>
+          <h1 className=" text-lg md:text-xl font-medium text-black">
+            Los Angeles, CA
+          </h1>
           <a
             href="mailto:pn@efficient.com"
-            className="text-xl font-medium text-black"
+            className=" text-lg md:text-xl font-medium text-black"
           >
             <h1>pn@efficient.com</h1>
           </a>
