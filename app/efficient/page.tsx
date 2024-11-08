@@ -42,7 +42,7 @@ export default function Home() {
             Los Angeles, CA
           </h1>
           <a
-            href="mailto:pn@efficient.com"
+            href="mailto:pn@efficient-tv.com"
             className=" text-lg md:text-xl font-medium text-black"
           >
             <h1>pn@efficient-tv.com</h1>

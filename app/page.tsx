@@ -37,10 +37,10 @@ export default function Home() {
             2108 N ST #9219 Sacramento, CA 95816
           </h1>
           <a
-            href="mailto:jp@pelicanholdings.com"
+            href="mailto:jp@pelicanholdings.co"
             className=" text-lg md:text-xl font-medium text-black"
           >
-            <h1>jp@pelicanholdings.com</h1>
+            <h1>jp@pelicanholdings.co</h1>
           </a>
         </motion.div>
       </div>
