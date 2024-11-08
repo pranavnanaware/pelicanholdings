@@ -45,7 +45,7 @@ export default function Home() {
             href="mailto:pn@efficient.com"
             className=" text-lg md:text-xl font-medium text-black"
           >
-            <h1>pn@efficient.com</h1>
+            <h1>pn@efficient-tv.com</h1>
           </a>
         </motion.div>
       </div>
