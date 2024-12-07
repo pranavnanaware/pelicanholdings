@@ -22,7 +22,7 @@ const Hero = () => {
           alt="Company Logo"
           className="not-prose mb-6 dark:invert md:mb-8"
         />
-        <h1 className="!mb-0 sm:text-2xl md:text-4xl lg:text-5xl">
+        <h1 className="!mb-0 sm:text-2xl md:text-4xl lg:text-5xl font-bold">
           <Balancer>
             Building the entertainment and technology of tomorrow
             <span className="animate-bounce">
