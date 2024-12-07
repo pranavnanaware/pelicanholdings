@@ -1,50 +1,121 @@
 "use client";
 
-import { HeroParticle } from "@/components/hero/heroParticles";
 import GradualSpacing from "@/components/ui/gradual-spacing";
-import Image from "next/image";
-
 import { motion } from "framer-motion";
+import { Ventures } from "@/components/ventures";
+import StudioCoreFunctions from "@/components/studio-functions";
+import Balancer from "react-wrap-balancer";
+import { Container } from "@/components/ui/craft";
+import { FutureEntertainment } from "@/components/future";
+import { HorizonCard } from "@/components/horizon";
+import Footer from "@/components/footer";
+import Hero from "@/components/hero";
 
 export default function Home() {
   return (
-    <div className="relative">
-      <div className="absolute top-0 w-full h-screen z-10 flex items-center justify-center flex-col space-y-10">
-        <div className="flex flex-col items-center justify-center ">
-          {" "}
+    <div className="relative bg-white dark:bg-black">
+      {/* Header Section */}
+      <header className="min-h-screen flex items-center justify-center bg-white p-10">
+        <Hero />
+      </header>
+
+      {/* Main Content */}
+      <main id="main">
+        <Container className="not-prose">
+          {/* Our Ventures Section */}
           <motion.div
+            className="flex flex-col items-start justify-center py-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 1.2, duration: 0.5 }}
           >
-            <Image src={"/pellican.png"} alt={""} height={150} width={150} />
-          </motion.div>
-          <div className="w-full md:w-3/4 lg:w-1/2">
-            <GradualSpacing
-              className="font-display text-center text-4xl font-bold tracking-tight text-black dark:text-white sm:text-4xl md:text-5xl lg:text-6xl"
-              text="A global entertainment and technology company "
-            />
-          </div>
-        </div>
+            <h3 className="text-4xl mb-4">
+              <Balancer>Our Ventures</Balancer>
+            </h3>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="flex flex-col  items-center justify-center"
-        >
-          <h1 className=" text-lg md:text-xl font-medium text-black">
-            2108 N ST #9219 Sacramento, CA 95816
-          </h1>
-          <a
-            href="mailto:jp@pelicanholdings.co"
-            className=" text-lg md:text-xl font-medium text-black"
+            <div className="w-full">
+              <Ventures />
+            </div>
+          </motion.div>
+
+          {/* Studio Core Functions Section */}
+          <motion.div
+            className="flex flex-col items-center justify-center py-12 bg-white dark:bg-gray-900"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.4, duration: 0.5 }}
           >
-            <h1>jp@pelicanholdings.co</h1>
-          </a>
-        </motion.div>
-      </div>
-      <HeroParticle />
+            <div className="w-full">
+              <StudioCoreFunctions />
+            </div>
+          </motion.div>
+        </Container>
+
+        <Container className="not-prose">
+          {/* Future of Entertainment Section */}
+          <motion.div
+            className="flex flex-col items-start justify-center py-12 bg-white dark:bg-gray-900"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.6, duration: 0.5 }}
+          >
+            <h3 className="text-4xl mb-4">
+              <Balancer>
+                How are we transforming the future of entertainment
+              </Balancer>
+            </h3>
+            <div className="w-full">
+              <FutureEntertainment />
+            </div>
+          </motion.div>
+        </Container>
+        <Container className="not-prose">
+          {/* Future of Entertainment Section */}
+          <motion.div
+            className="flex flex-col items-start justify-center py-12 bg-white dark:bg-gray-900"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.6, duration: 0.5 }}
+          >
+            <h3 className="text-4xl mb-4">
+              <Balancer>Our Horizon</Balancer>
+            </h3>
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
+              <HorizonCard
+                image={"./adventure.png"}
+                title={"Adventure & Entertainment Resorts"}
+              />
+              <HorizonCard
+                image={"./cityscapes.png"}
+                title={"Cityscape Studios & Soundstages"}
+              />
+              <HorizonCard
+                image={"./events.png"}
+                title={"Live Events & Experiences"}
+              />
+            </div>
+          </motion.div>
+          {/* Our Vision Section */}
+          <motion.div
+            className="flex flex-col items-center justify-center py-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+          >
+            <h3 className="text-4xl text-left w-full my-8">
+              <Balancer>Our Vision</Balancer>
+            </h3>
+
+            <div className="w-full max-w-3xl flex justify-center items-center my-8">
+              <GradualSpacing
+                className="text-center text-2xl tracking-tight text-black dark:text-white sm:text-2xl md:text-3xl lg:text-4xl"
+                text="To use artistry and technology to understand cultures and engage people"
+              />
+            </div>
+          </motion.div>
+        </Container>
+        <Footer />
+      </main>
     </div>
   );
 }
