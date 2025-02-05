@@ -22,26 +22,14 @@ const Hero = () => {
           alt="Company Logo"
           className="not-prose mb-6 dark:invert md:mb-8"
         />
-        <h1 className="!mb-0 sm:text-2xl md:text-4xl lg:text-5xl font-bold">
+        <h1 className="!mb-0 sm:text-4xl md:text-4xl lg:text-5xl font-bold">
           <Balancer>
-            Building the entertainment and technology of tomorrow
-            <span className="animate-bounce">
-              {Array.from("…today").map((char, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2 }}
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </span>
+            An American Entertainment Company
           </Balancer>
         </h1>
         <div className="not-prose mt-6 flex gap-2 md:mt-12">
           <Button asChild>
-            <a href="#main">Learn More</a>
+            <a href="#main">Learn More about Joseph Profitt</a>
           </Button>
         </div>
       </Container>

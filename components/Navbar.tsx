@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 w-full z-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="max-w-4xl md:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link
           href={pathname === "/efficient" ? "/" : "/efficient"}
           className="flex flex-row items-center gap-2 text-lg font-bold"
