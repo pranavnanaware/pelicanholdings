@@ -12,7 +12,7 @@ export default function PersonInfo({ name, role, bio, imageUrl }: PersonInfoProp
   return (
     <Card className="overflow-hidden">
       <div className="flex flex-col md:flex-row">
-        <div className="w-full md:w-1/3">
+        <div className="w-full md:w-1/3 outline">
           <Image
             src={imageUrl || "/placeholder.svg"}
             alt={name}
@@ -22,9 +22,9 @@ export default function PersonInfo({ name, role, bio, imageUrl }: PersonInfoProp
           />
         </div>
         <div className="w-full md:w-2/3 p-6">
-          <h2 className="text-2xl font-bold mb-2">{name}</h2>
-          <p className="text-lg text-muted-foreground mb-4">{role}</p>
-          <p className="text-gray-700 dark:text-gray-300">{bio}</p>
+          <h2 className="text-2xl font-bold mb-1">{name}</h2>
+          <p className="text-lg text-muted-foreground mb-2">{role}</p>
+          <p className="text-gray-700 dark:text-gray-300 text-sm whitespace-pre-line">{bio}</p>
         </div>
       </div>
     </Card>

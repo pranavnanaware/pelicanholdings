@@ -11,6 +11,7 @@ import { HorizonCard } from "@/components/horizon";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import PersonInfo from "@/components/personInfo";
+import {  biography } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
             transition={{ delay: 1.4, duration: 0.5 }}
           >
             <div className="w-full">
-              <PersonInfo name={"Joseph Profitt"} role={"CEO"} bio={"He then joined Lionsgate Studios, one of the most reputable film and television studios in the world, to build a streaming television business, focusing on operating all aspects of the business including financial planning and analysis, marketing strategy, data synthesis, and cross-functional team leadership. At the core of Joseph's leadership philosophy is understanding human psychology and motivation. Joseph\'s vision for his company is not just about creating a valuable business but about innovating the media and entertainment landscape through a blend of creativity, technology, and human-centric leadership. While Joseph brings many strengths to the table, he is also aware of areas for improvement. Joseph works hard to address tendencies toward emotional impulses overshadowing objective analysis, and he recognizes the importance of setting realistic, near-term goals while pursuing long-term ambitions. Joseph enjoys spending time with his wife and two children in Los Angeles, staying physically active, surfing and giving back to the community and church through volunteering and community service."} imageUrl={"/joseph.webp"} />
+              <PersonInfo name={biography.name} role={biography.role} bio={biography.bio} imageUrl={biography.url} />
             </div>
           </motion.div>
         </Container>
