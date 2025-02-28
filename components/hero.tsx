@@ -27,11 +27,11 @@ const Hero = () => {
             An American Entertainment Company
           </Balancer>
         </h1>
-        <div className="not-prose mt-6 flex gap-2 md:mt-12">
+        {/* <div className="not-prose mt-6 flex gap-2 md:mt-12">
           <Button asChild>
             <a href="#main">Learn More about Joseph Profitt</a>
           </Button>
-        </div>
+        </div> */}
       </Container>
     </Section>
   );

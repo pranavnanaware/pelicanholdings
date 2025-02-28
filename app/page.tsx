@@ -22,7 +22,7 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main id="main">
+      {/* <main id="main">
         <Container className="px-4 sm:px-6 lg:px-8 not-prose">
          
           <motion.div
@@ -38,7 +38,7 @@ export default function Home() {
         </Container>
 
         <Footer />
-      </main>
+      </main> */}
     </div>
   );
 }
